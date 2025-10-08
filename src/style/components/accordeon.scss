@@ -1,20 +1,100 @@
 @use "../common/vars.scss" as *;
+// @use '../base/variables.scss' as *;
 
 .accordeon {
-    list-style: none;
-    border: 1px solid #ccc;
-    max-width: 800px;
 
-    .accordeon__header {
-        width: 100%;
-        background: #f5f5f5;
-        cursor: pointer;
-        text-align: left;
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition-duration: 0.3s;
     }
 
-    .accordeon__body {
-        height: 0;
+    &__body{
         overflow: hidden;
-        transition: height 0.3s ease;
+    }
+
+    &__description:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &__base.active {
+        padding-bottom: 18px;
+
+        .accordeon__content {
+            grid-template-rows: 1fr;
+        }
+
+        .accordeon__status-icon {
+            &::before {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(-180deg);
+            }
+        }
+    }
+    
+    &__base {
+        transition-duration: padding 0.3s;
+        border-bottom: 1px solid $white;
+    }
+    
+    &__header-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+        cursor: pointer;
+    }
+
+    @media(hover:hover) {
+        &__header-item:hover {
+            .accordeon__item-title {
+                color: $red;
+            }
+
+            .accordeon__status-icon {
+                &::before,
+                &::after {
+                    background-color: $red;
+                }
+            }
+        }
+    }
+
+    &__item-title {
+        // font-family: "Oswald";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.37;
+        text-transform: uppercase;
+        transition: color .3s;
+    }
+    
+    &__status-icon {
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 24px;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 16px;
+            height: 2px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $white;
+            transition: 0.3s;
+        }
+
+        &::before {
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
     }
 }
