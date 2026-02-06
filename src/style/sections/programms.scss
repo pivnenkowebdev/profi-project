@@ -23,13 +23,6 @@
             margin-bottom: 60px;
         }
 
-        .lead-link {
-            align-self: center;
-            &::before, &::after {
-                border-color: $white;
-            }
-        }
-
         .programms-list {
             margin-bottom: 40px;
         }
@@ -60,13 +53,40 @@
 
 .card-programm {
     color: $black;
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
     border-radius:  16px;
     background-color: $white;
     height: 100%;
 
     @media (max-width: 1024px) {
         padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+        align-items: flex-start;
+    }
+
+    .lead-link {
+        display: block;
+        margin-top: auto;
+        text-align: center;
+        align-self: center;
+
+        @media (max-width: 850px) {
+            font-size: 18px;
+        }
+
+        @media (hover: none) {
+            &::before, &::after {
+                display: none;
+            }
+        }
+
+        &::before, &::after {
+            border-color: $blue;
+        }
     }
 
     &__header {
@@ -121,6 +141,7 @@
 
     .list-of-advantages {
         gap: 10px;
+        margin-bottom: 30px;
     }
 
     .list-of-advantages__item {
