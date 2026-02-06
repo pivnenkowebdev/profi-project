@@ -8,6 +8,7 @@
 @use '../style/sections/about-me.scss';
 @use '../style/sections/garancy.scss';
 @use '../style/sections/programms.scss';
+@use '../style/sections/footer.scss';
 
 // blocs
 @use '../style/components/burger.scss';
@@ -17,3 +18,4 @@
 @use '../style/components/ava.scss';
 @use '../style/components/lead-link.scss';
 @use '../style/components/accordeon.scss';
+@use '../style/components/contact-link.scss';

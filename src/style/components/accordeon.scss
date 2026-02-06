@@ -1,5 +1,4 @@
 @use "../common/vars.scss" as *;
-// @use '../base/variables.scss' as *;
 
 .accordeon {
 
@@ -13,8 +12,12 @@
         overflow: hidden;
     }
 
+    &__description {
+        font-size: 20px;
+    }
+
     &__description:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     &__base.active {
@@ -33,13 +36,26 @@
                 transform: translate(-50%, -50%) rotate(-180deg);
             }
         }
+
+        .accordeon__header-item {
+            .accordeon__item-title {
+                color: $orange;
+            }
+
+            .accordeon__status-icon {
+                &::before,
+                &::after {
+                    background-color: $orange;
+                }
+            }
+        }
     }
     
     &__base {
         transition-duration: padding 0.3s;
         border-bottom: 1px solid $white;
     }
-    
+
     &__header-item {
         display: flex;
         justify-content: space-between;
@@ -64,15 +80,14 @@
     }
 
     &__item-title {
-        // font-family: "Oswald";
-        font-size: 20px;
+        font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.37;
         text-transform: uppercase;
         transition: color .3s;
     }
-    
+
     &__status-icon {
         display: block;
         position: relative;
@@ -96,5 +111,15 @@
         &::before {
             transform: translate(-50%, -50%) rotate(90deg);
         }
+    }
+}
+
+@media(max-width: 768px) {
+    .accordeon__item-title {
+        font-size: 20px;
+    }
+
+    .accordeon__description {
+        font-size: 18px;
     }
 }

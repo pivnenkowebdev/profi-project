@@ -16,11 +16,16 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $white;
     font-family: "TikTokSans";
     color: $black;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 section {
@@ -53,16 +58,6 @@ main {
     }
 }
 
-.third {
-    background-color: green;
-    z-index: 3;
-}
-
-.fourth {
-    background-color: $red;
-    z-index: 4;
-}
-
 *, *>* {
     padding: 0;
     margin: 0;
@@ -87,11 +82,4 @@ button {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-.preload * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
 }

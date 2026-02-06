@@ -1,0 +1,39 @@
+.footer {
+    &__content {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__line {
+        margin: -30px auto 10px;
+        padding: 0;
+        height: 50px;
+        border: none;
+        border-bottom: 1px solid #d6d5d5;
+        box-shadow: 0 20px 20px -20px #ffffff;
+        width: 95%;
+    }
+
+    .container {
+        height: auto;
+        min-height: auto;
+    }
+}
+
+.info-group {
+    &__item {
+    
+    }
+}
+
+.info-block {
+
+}
+
+.info-list {
+    &__item {
+    
+    }
+}

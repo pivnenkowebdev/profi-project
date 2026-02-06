@@ -8,7 +8,7 @@
     z-index: 10;
     background-color: $blue;
     padding: 20px 0;
-    transition: padding .3s, background-color .3s, backdrop-filter .3s, background .3s;
+    transition: padding .3s, background-color .1s, backdrop-filter .3s;
 
     &__content {
         display: flex;
@@ -28,6 +28,7 @@
 }
 
 .logo {
+    display: block;
     width: 130px;
     z-index: 10;
     &__pic {
@@ -40,7 +41,7 @@
     &__list {
         display: flex;
         gap: 50px;
-        
+
         @media (max-width: 1300px) {
             flex-direction: column;
             align-items: center;
@@ -52,10 +53,6 @@
         }
     }
 
-    &__item {
-
-    }
-
     @media (max-width: 1300px) {
         transition: transform .3s ease-in-out;
         position: fixed;
@@ -63,11 +60,11 @@
         top: 0;
         width: 100%;
         transform: translateY(100%);
-        
+
         &.open {
             transform: translateY(0);
         }
-        
+
     }
 }
 
@@ -81,7 +78,7 @@
     font-size: 20px;
 
     @media (hover:hover) {
-    
+
         &:hover {
             &::after,
             &::before {
@@ -89,22 +86,22 @@
                 left: 0;
             }
         }
-    
+
         &::after,
         &::before {
-            content: ''; 
+            content: '';
             position: absolute;
             bottom: -2px;
             width: 0;
             right: 0;
             height: 3px;
         }
-        
+
         &::before {
             transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
             background: $white;
         }
-        
+
         &::after {
             transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
             background: $orange;

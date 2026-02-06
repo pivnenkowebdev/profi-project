@@ -4,7 +4,7 @@ const menu = document.querySelector("#menu");
 
 let isMenuOpen = false;
 
-const isMobile = () => window.matchMedia("(max-width: 1250px)").matches;
+const isMobile = () => window.matchMedia("(max-width: 1300px)").matches;
 
 const openMenu = () => {
   burger.classList.add("open");
