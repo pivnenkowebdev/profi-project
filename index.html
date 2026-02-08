@@ -141,6 +141,27 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Пивненко Антон",
+  "image": "https://pivnenkowebdev.com/images/ava.jpg",
+  "url": "https://t.me/pivnenkowebdev",
+  "jobTitle": "Преподаватель программирования",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Пивненко Антон",
+    "url": "https://pivnenkowebdev.com/"
+  },
+  "description": "Онлайн-обучение программированию для детей и подростков 7-17 лет. Программирование в индивидуальном или групповом формате. Первое пробное занятие бесплатно.",
+  "potentialAction": {
+    "@type": "EnrollAction",
+    "target": "https://t.me/pivnenkowebdev"
+  }
+}
+    </script>
+
     <script defer="defer" type="module" src="./src/js/main.js"></script>
   </head>
   <body>
@@ -176,45 +197,45 @@
       </div>
     </header>
     <main id="main">
-      <section class="welcome" id="welcomeSection">
-        <div class="container">
-          <div class="welcome__content">
-            <article class="hero">
-              <h1 class="main-title" id="mainTitle">Пивненко Антон</h1>
-              <h2 class="main-subtitle" id="heroSubtitle">
-                <span class="main-subtitle__marker" aria-hidden="true">*</span>
-                <span>Онлайн-обучение программированию для детей и подростков</span>
-              </h2>
-              <ul class="list-of-advantages" id="heroList">
-                <li class="list-of-advantages__item">
-                  <span class="list-of-advantages__marker">&mdash;</span>
-                  <span class="list-of-advantages__text">
-                    Программирование для подростков 7–17 лет — в индивидуальном или групповом формате
-                  </span>
-                </li>
-                <li class="list-of-advantages__item">
-                  <span class="list-of-advantages__marker">&mdash;</span>
-                  <span class="list-of-advantages__text">Понятно, с поддержкой, в индивидуальном темпе.</span>
-                </li>
-                <li class="list-of-advantages__item">
-                  <span class="list-of-advantages__marker">&mdash;</span>
-                  <span class="list-of-advantages__text">Первое пробное занятие — бесплатно</span>
-                </li>
-              </ul>
-              <a href="https://t.me/pivnenkowebdev" class="lead-link" id="heroLink" target="_blank">
-                Получить бесплатный урок
-              </a>
-            </article>
-            <div class="ava">
-              <div class="ava__shape ava__shape--img">
-                <img src="/images/ava.jpg" alt="" class="ava__img">
-              </div>
-              <div class="ava__shape ava__shape--first"></div>
-              <div class="ava__shape ava__shape--second"></div>
+    <section class="welcome" id="welcomeSection" itemscope itemtype="https://schema.org/Person">
+      <div class="container">
+        <div class="welcome__content">
+          <article class="hero">
+            <h1 class="main-title" id="mainTitle" itemprop="name">Пивненко Антон</h1>
+            <h2 class="main-subtitle" id="heroSubtitle">
+              <span class="main-subtitle__marker" aria-hidden="true">*</span>
+              <span>Онлайн-обучение программированию для детей и подростков</span>
+            </h2>
+            <ul class="list-of-advantages" id="heroList">
+              <li class="list-of-advantages__item">
+                <span class="list-of-advantages__marker">&mdash;</span>
+                <span class="list-of-advantages__text">
+                  Программирование для подростков 7–17 лет — в индивидуальном или групповом формате
+                </span>
+              </li>
+              <li class="list-of-advantages__item">
+                <span class="list-of-advantages__marker">&mdash;</span>
+                <span class="list-of-advantages__text">Понятно, с поддержкой, в индивидуальном темпе.</span>
+              </li>
+              <li class="list-of-advantages__item">
+                <span class="list-of-advantages__marker">&mdash;</span>
+                <span class="list-of-advantages__text">Первое пробное занятие — бесплатно</span>
+              </li>
+            </ul>
+            <a href="https://t.me/pivnenkowebdev" class="lead-link" id="heroLink" target="_blank" itemprop="url">
+              Получить бесплатный урок
+            </a>
+          </article>
+          <div class="ava">
+            <div class="ava__shape ava__shape--img">
+              <img src="/images/ava.jpg" alt="Фото Пивненко Антона" class="ava__img" itemprop="image">
             </div>
+            <div class="ava__shape ava__shape--first"></div>
+            <div class="ava__shape ava__shape--second"></div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
       <section class="about-me" id="aboutMeSection">
         <div class="container">
           <div class="about-me__content">
