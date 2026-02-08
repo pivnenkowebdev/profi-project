@@ -1,6 +1,12 @@
 @use "../common/vars.scss" as *;
 
 .welcome {
+    background: linear-gradient(0deg,rgba(0, 0, 0, 0.62) 100%, rgba(255, 255, 255, 0) 100%), url(/images/preview.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     &__content {
         padding: 40px 0;
         display: flex;

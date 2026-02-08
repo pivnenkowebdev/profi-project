@@ -92,7 +92,8 @@ mm.add("(min-width: 769px)", () => {
       "<",
     )
     .from("#programmTitle", { x: "150%" })
-    .from("#programmSubtitle", { x: "150%" }, ">");
+    .from("[data-programm-subtitle='1']", { x: "150%" }, ">")
+    .from("[data-programm-subtitle='2']", { x: "150%" }, ">4");
 
   gsap.from("[data-programm]", {
     scrollTrigger: {
@@ -105,18 +106,6 @@ mm.add("(min-width: 769px)", () => {
     opacity: 0,
     stagger: 0.6,
     duration: 1,
-  });
-
-  gsap.from("#programmLink", {
-    scrollTrigger: {
-      trigger: "#programmsSection",
-      start: "top 95%",
-      end: "bottom 90%",
-      scrub: 2,
-    },
-    y: "100%",
-    opacity: 0,
-    stagger: 0.6,
   });
 
   gsap.from("[data-garancy-card]", {

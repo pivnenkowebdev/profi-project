@@ -11,7 +11,7 @@
     <header class="header" id="header">
       <div class="container">
         <div class="header__content">
-          <a href="" class="logo">
+          <a href="#welcomeSection" class="logo">
             <img src="/images/logo.svg" alt="logo" class="logo__pic">
           </a>
           <nav class="menu" id="menu">
@@ -37,7 +37,7 @@
                 </a>
               </li>
               <li class="menu__item">
-                <a class="anchor-link" data-anchor >
+                <a class="anchor-link" data-anchor href="#footer">
                   Контакты
                 </a>
               </li>
@@ -75,7 +75,7 @@
                   <span class="list-of-advantages__text">Первое пробное занятие — бесплатно</span>
                 </li>
               </ul>
-              <a href="" class="lead-link" id="heroLink">
+              <a href="https://t.me/pivnenkowebdev" class="lead-link" id="heroLink" target="_blank">
                 Получить бесплатный урок
               </a>
             </article>
@@ -174,7 +174,7 @@
                 </article>
               </li>
             </ul>
-            <a href="" class="lead-link" id="garancyLink">
+            <a href="https://t.me/pivnenkowebdev" class="lead-link" id="garancyLink" target="_blank">
                 Узнать подробности
             </a>
           </div>
@@ -184,7 +184,7 @@
         <div class="container">
           <div class="learning-programms__content">
             <h3 class="section-title" id="programmTitle">Программы обучения</h3>
-            <h2 class="main-subtitle" id="programmSubtitle">
+            <h2 class="main-subtitle" data-programm-subtitle="1">
               <span class="main-subtitle__marker" aria-hidden="true">*</span>
               <span>Индивидуальные занятия</span>
             </h2>
@@ -212,7 +212,7 @@
                       <span class="list-of-advantages__text">Высокооплачиваемый навык будущего</span>
                     </li>
                   </ul>
-                  <a href="" class="lead-link">
+                  <a href="https://t.me/pivnenkowebdev" class="lead-link" target="_blank">
                     Получить бесплатный урок
                   </a>
                 </article>
@@ -240,7 +240,7 @@
                       <span class="list-of-advantages__text">Быстрый путь к первым деньгам</span>
                     </li>
                   </ul>
-                  <a href="" class="lead-link">
+                  <a href="https://t.me/pivnenkowebdev" class="lead-link" target="_blank">
                     Получить бесплатный урок
                   </a>
                 </article>
@@ -268,12 +268,45 @@
                       <span class="list-of-advantages__text">Закладывает фундамент успешного будущего</span>
                     </li>
                   </ul>
-                  <a href="" class="lead-link">
+                  <a href="https://t.me/pivnenkowebdev" class="lead-link" target="_blank">
                     Получить бесплатный урок
                   </a>
               </article>
             </li>
-          </ul>
+            </ul>
+            <h2 class="main-subtitle" data-programm-subtitle="2">
+              <span class="main-subtitle__marker" aria-hidden="true">*</span>
+              <span>Интенсивы</span>
+            </h2>
+            <ul class="programms-list">
+              <li class="programms-list__item" data-programm>
+                <article class="card-programm">
+                  <div class="card-programm__header">
+                    <h4 class="card-programm__title">"Экспресс к ОГЭ"</h4>
+                  <div class="card-programm__wrapper-info">
+                    <p class="card-programm__description">Когда эксзамен ближе, чем кажется</p>
+                  </div>
+                  </div>
+                  <ul class="list-of-advantages">
+                    <li class="list-of-advantages__item">
+                      <span class="list-of-advantages__marker">*</span>
+                      <span class="list-of-advantages__text">Чёткий план подготовки: знаешь, что и зачем делаешь</span>
+                    </li>
+                    <li class="list-of-advantages__item">
+                      <span class="list-of-advantages__marker">*</span>
+                      <span class="list-of-advantages__text">Самостоятельная практика в удобном темпе</span>
+                    </li>
+                    <li class="list-of-advantages__item">
+                      <span class="list-of-advantages__marker">*</span>
+                      <span class="list-of-advantages__text">Домашние задания с проверкой и разбором ошибок</span>
+                    </li>
+                  </ul>
+                  <a href="https://t.me/pivnenkowebdev" class="lead-link" target="_blank">
+                    Записаться на интесив
+                  </a>
+                </article>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -394,12 +427,12 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <hr class="footer__line">
       <div class="container">
         <div class="footer__content">
           <div class="footer__wrapper-adapt">
-            <a href="" class="logo">
+            <a href="#welcomeSection" class="logo">
               <img src="/images/logo.svg" alt="logo" class="logo__pic">
             </a>
             <a href="" class="contact-link">
@@ -409,6 +442,18 @@
           </a>
           </div>
           <ul class="info-group">
+            <li class="info-group__item">
+              <h6 class="info-group__title">Для связи:</h6>
+              <ul class="info-list">
+                <li class="info-list__item">
+                  <a class="info-link" href="mailto:pivnenkowebdev@gmail.com" target="_blank">Email: pivnenkowebdev@gmail.com</a>
+                </li>
+                <li class="info-list__item">
+                  <a class="info-link" href="https://t.me/pivnenkowebdev" target="_blank">Telegram: @pivnenkowebdev</a>
+                </li>
+              </ul>
+            </li>
+            <li class="info-group__item">
             <li class="info-group__item">
               <h6 class="info-group__title">Информация:</h6>
               <ul class="info-list">
@@ -420,15 +465,15 @@
               <h6 class="info-group__title">Документы:</h6>
               <ul class="info-list">
                 <li class="info-list__item">
-                  <a href="contact-link">Оферта</a>
+                  <a class="info-link" href="https://disk.yandex.ru/i/W-XnFg7-3kypBQ" target="_blank">Оферта</a>
                 </li>
                 <li class="info-list__item">
-                  <a href="contact-link">Политика конфиденциальности</a>
+                  <a class="info-link" href="https://disk.yandex.ru/i/dnQ198gBVj6mXw" target="_blank">Политика конфиденциальности</a>
                 </li>
               </ul>
             </li>
           </ul>
-          <a href="" class="contact-link">
+          <a href="https://t.me/pivnenkowebdev" target="_blank" class="contact-link">
             <svg class="contact-link__icon">
               <use href="/images/sprite.svg#tgIcon" viewBox="0 0 800 800"></use>
             </svg>

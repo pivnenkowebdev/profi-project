@@ -1,6 +1,7 @@
 @use "../common/vars.scss" as *;
 
 .hero {
+    color: $white;
     .list-of-advantages {
         margin-bottom: 40px;
     }
