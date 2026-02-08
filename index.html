@@ -18,6 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Пивненко Антон | Обучение программированию">
     <meta property="og:title" content="Программирование для детей и подростков 7-17 лет">
+    <meta name="keywords" content="Python, Scratch, Web, обучение, создание сайтов, программировние, ОГЭ, ЕГЭ, дети, подростки">
     <meta property="og:description" content="Онлайн-обучение программированию для детей и подростков. Python, создание сайтов, подготовка к ОГЭ и ЕГЭ по информатике. Первый урок бесплатно. Репетитор с опытом 5+ лет.">
     <meta property="og:image" content="https://pivnenkowebdev.com/images/ava.jpg">
     <meta property="og:url" content="https://pivnenkowebdev.com/">
@@ -143,38 +144,28 @@
     <script defer="defer" type="module" src="./src/js/main.js"></script>
   </head>
   <body>
-    <header class="header" id="header">
+    <header class="header" id="header" itemscope itemtype="https://schema.org/WPHeader">
       <div class="container">
         <div class="header__content">
-          <a href="#welcomeSection" class="logo">
-            <img src="/images/logo.svg" alt="logo" class="logo__pic">
+          <a href="#welcomeSection" class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <img src="/images/logo.svg" alt="logo" class="logo__pic" itemprop="url">
           </a>
-          <nav class="menu" id="menu">
+          <nav class="menu" id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement">
             <ul class="menu__list" id="menuList">
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#aboutMeSection">
-                  О преподавателе
-                </a>
+                <a class="anchor-link" data-anchor href="#aboutMeSection" itemprop="url">О преподавателе</a>
               </li>
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#garancySection">
-                  Гарантии и подход
-                </a>
+                <a class="anchor-link" data-anchor href="#garancySection" itemprop="url">Гарантии и подход</a>
               </li>
               <li class="menu__item menu__item--drop">
-                <a class="anchor-link" data-anchor href="#programmsSection">
-                  Программы
-                </a>
+                <a class="anchor-link" data-anchor href="#programmsSection" itemprop="url">Программы</a>
               </li>
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#faq">
-                  Вопросы родителей
-                </a>
+                <a class="anchor-link" data-anchor href="#faq" itemprop="url">Вопросы родителей</a>
               </li>
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#footer">
-                  Контакты
-                </a>
+                <a class="anchor-link" data-anchor href="#footer" itemprop="url">Контакты</a>
               </li>
             </ul>
           </nav>
