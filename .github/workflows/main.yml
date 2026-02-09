@@ -1,4 +1,4 @@
-name: Deploy to Timeweb
+name: Deploy to Time-web
 
 on:
   push:
