@@ -1,4 +1,5 @@
-name: Deploy to hosting Timeweb
+name: Deploy to Timeweb
+
 on:
   push:
     branches:
@@ -9,13 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Deploy to Hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Timeweb via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir:  pivnenkowebdev/public_html/
+          local-dir: dist/
+          server-dir: pivnenkowebdev/public_html/
