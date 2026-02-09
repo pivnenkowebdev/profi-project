@@ -76,6 +76,10 @@ mm.add("(min-width: 769px)", () => {
         start: "top 90%",
         end: "50% 70%",
         scrub: 2,
+        onEnter: () =>
+          document.querySelector("#header").classList.add("dark-mode"),
+        onLeaveBack: () =>
+          document.querySelector("#header").classList.remove("dark-mode"),
       },
     })
     .to("body", {
@@ -83,14 +87,6 @@ mm.add("(min-width: 769px)", () => {
       color: "#fff",
       duration: 0.5,
     })
-    .to(
-      "#header",
-      {
-        backgroundColor: "rgba(0, 8, 20, 0.8)",
-        duration: 0.1,
-      },
-      "<",
-    )
     .from("#programmTitle", { x: "150%" })
     .from("[data-programm-subtitle='1']", { x: "150%" }, ">")
     .from("[data-programm-subtitle='2']", { x: "150%" }, ">4");

@@ -8,7 +8,7 @@
     z-index: 10;
     background-color: $blue;
     padding: 20px 0;
-    transition: padding .3s, background-color .1s, backdrop-filter .3s;
+    transition: padding .3s, background-color .3s, backdrop-filter .3s; // увеличил время для bg
 
     &__content {
         display: flex;
@@ -24,6 +24,14 @@
         padding: 10px 0;
         background-color: $blueTransparent;
         backdrop-filter: blur(5px);
+    }
+
+    &.dark-mode {
+        background-color: rgba(0, 8, 20, 0.8);
+        
+        &.scrolled {
+            background-color: rgba(0, 8, 20, 0.8);
+        }
     }
 }
 
