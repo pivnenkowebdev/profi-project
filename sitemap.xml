@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+	<loc>https://pivnenkowebdev.com/</loc>
+	<lastmod>2026-02-10T19:29:44+01:00</lastmod>
+	<changefreq>yearly</changefreq>
+	<priority>1.0</priority>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/logo.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/preview-desktop.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/ava.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/koza.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/woman-mac.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/man-mac.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/fire.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/rocket-icon.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/brain-icon.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/puzzle-icon.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://pivnenkowebdev.com/images/statisctics-icon.svg</image:loc>
+	</image:image>
+</url>
+</urlset>
