@@ -84,7 +84,6 @@
           "@type": "CourseInstance",
           "name": "Python для детей",
           "courseMode": "online",
-          "educationalLevel": "12+",
           "instructor": {
             "@id": "https://pivnenkowebdev.com/#person"
           }
@@ -93,7 +92,6 @@
           "@type": "CourseInstance",
           "name": "Web-разработка для подростков",
           "courseMode": "online",
-          "educationalLevel": "12+",
           "instructor": {
             "@id": "https://pivnenkowebdev.com/#person"
           }
@@ -102,7 +100,6 @@
           "@type": "CourseInstance",
           "name": "Scratch для детей",
           "courseMode": "online",
-          "educationalLevel": "7+",
           "instructor": {
             "@id": "https://pivnenkowebdev.com/#person"
           }
@@ -187,28 +184,28 @@
     <script type="module" src="./src/js/main.js"></script>
   </head>
   <body>
-    <header class="header" id="header" itemscope itemtype="https://schema.org/WPHeader">
-      <div class="container">
-        <div class="header__content">
-          <a href="#welcomeSection" class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-            <img src="/images/logo.svg" alt="Пивненко Антон - Обучение программированию" class="logo__pic" itemprop="url">
+<header class="header" id="header">
+  <div class="container">
+    <div class="header__content">
+      <a href="#welcomeSection" class="logo">
+        <img src="/images/logo.svg" alt="Пивненко Антон - Обучение программированию" class="logo__pic">
           </a>
-          <nav class="menu" id="menu" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <nav class="menu" id="menu">
             <ul class="menu__list" id="menuList">
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#aboutMeSection" itemprop="url">О преподавателе</a>
+                <a class="anchor-link" data-anchor href="#aboutMeSection">О преподавателе</a>
               </li>
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#garancySection" itemprop="url">Гарантии и подход</a>
+                <a class="anchor-link" data-anchor href="#garancySection">Гарантии и подход</a>
               </li>
               <li class="menu__item menu__item--drop">
-                <a class="anchor-link" data-anchor href="#programmsSection" itemprop="url">Программы</a>
+                <a class="anchor-link" data-anchor href="#programmsSection">Программы</a>
               </li>
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#faq" itemprop="url">Вопросы родителей</a>
+                <a class="anchor-link" data-anchor href="#faq">Вопросы родителей</a>
               </li>
               <li class="menu__item">
-                <a class="anchor-link" data-anchor href="#footer" itemprop="url">Контакты</a>
+                <a class="anchor-link" data-anchor href="#footer">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -219,12 +216,12 @@
       </div>
     </header>
     <main id="main">
-      <section class="welcome" id="welcomeSection" itemscope>
+      <section class="welcome" id="welcomeSection">
         <img class="welcome__preview" src="/images/preview-desktop.png" alt="Урок программирования" aria-hidden="true">
         <div class="container">
           <div class="welcome__content">
             <article class="hero">
-              <h1 class="main-title" id="mainTitle" itemprop="name">Пивненко Антон</h1>
+              <h1 class="main-title" id="mainTitle">Пивненко Антон</h1>
               <h2 class="main-subtitle" id="heroSubtitle">
                 <span class="main-subtitle__marker" aria-hidden="true">*</span>
                 <span>Онлайн-обучение программированию для детей и подростков</span>
@@ -245,13 +242,13 @@
                   <span class="list-of-advantages__text">Первое пробное занятие — бесплатно</span>
                 </li>
               </ul>
-              <a href="https://t.me/pivnenkowebdev" class="lead-link" id="heroLink" target="_blank" itemprop="url" rel="noopener noreferrer">
+              <a href="https://t.me/pivnenkowebdev" class="lead-link" id="heroLink" target="_blank" rel="noopener noreferrer">
                 Получить бесплатный урок
               </a>
             </article>
             <div class="ava">
               <div class="ava__shape ava__shape--img">
-                <img src="/images/ava.jpg" alt="Фото Пивненко Антона - преподавателя программирования" class="ava__img" itemprop="image">
+                <img src="/images/ava.jpg" alt="Фото Пивненко Антона - преподавателя программирования" class="ava__img">
               </div>
               <div class="ava__shape ava__shape--first"></div>
               <div class="ava__shape ava__shape--second"></div>
@@ -259,7 +256,7 @@
           </div>
         </div>
       </section>
-      <section class="about-me" id="aboutMeSection" itemscope>
+      <section class="about-me" id="aboutMeSection">
   <div class="container">
     <div class="about-me__content">
       <div class="about-me__wrapper-img about-me__wrapper-img--rock">
@@ -277,7 +274,7 @@
       <h3 class="section-title" id="aboutMeTitle">Обо мне</h3>
       <h2 class="main-subtitle" id="aboutMeSubtitle">
         <span class="main-subtitle__marker" aria-hidden="true">*</span>
-        <span itemprop="description">Я разработчик и преподаватель, который говорит с детьми на одном языке</span>
+        <span>Я разработчик и преподаватель, который говорит с детьми на одном языке</span>
       </h2>
       <ul class="list-of-advantages" id="listAbout">
         <li class="list-of-advantages__item" data-list="about">
@@ -302,53 +299,53 @@
     </div>
   </div>
       </section>
-      <section class="garancy" id="garancySection" itemscope>
+      <section class="garancy" id="garancySection">
   <div class="container">
     <div class="garancy__content">
-      <h3 class="section-title" id="garancyTitle" itemprop="name">Гарантии и подход</h3>
+      <h3 class="section-title" id="garancyTitle">Гарантии и подход</h3>
       <h2 class="main-subtitle" id="garancySubtitle">
         <span class="main-subtitle__marker" aria-hidden="true">*</span>
-        <span itemprop="description">Обучаю на реальных проектах и даю востребованные навыки с нуля</span>
+        <span>Обучаю на реальных проектах и даю востребованные навыки с нуля</span>
       </h2>
       <ul class="garancy-list" id="#garancyList">
         <li class="garancy-list__item" data-garancy-card>
-          <article class="garancy-card" itemscope>
+          <article class="garancy-card">
             <div class="garancy-card__top">
-              <h3 class="garancy-card__title" itemprop="name">Уроки без скуки</h3>
+              <h3 class="garancy-card__title">Уроки без скуки</h3>
               <img class="garancy-card__icon" src="/images/rocket-icon.svg" alt="rocket icon">
             </div>
-            <p class="garancy-card__description" itemprop="description">Никаких занудных лекций. Каждое занятие — это проект, игра или вызов, в котором хочется разобраться</p>
+            <p class="garancy-card__description">Никаких занудных лекций. Каждое занятие — это проект, игра или вызов, в котором хочется разобраться</p>
           </article>
         </li>
         <li class="garancy-list__item" data-garancy-card>
-          <article class="garancy-card" itemscope>
+          <article class="garancy-card">
             <div class="garancy-card__top">
-              <h3 class="garancy-card__title" itemprop="name">Научу думать, а не просто повторять</h3>
+              <h3 class="garancy-card__title">Научу думать, а не просто повторять</h3>
               <img class="garancy-card__icon" src="/images/brain-icon.svg" alt="rocket icon">
             </div>
-            <p class="garancy-card__description" itemprop="description">Мои ученики понимают, почему код работает — а не просто копируют. Это залог крепкого фундамента настоящего развития</p>
+            <p class="garancy-card__description">Мои ученики понимают, почему код работает — а не просто копируют. Это залог крепкого фундамента настоящего развития</p>
           </article>
         </li>
         <li class="garancy-list__item" data-garancy-card>
-          <article class="garancy-card" itemscope>
+          <article class="garancy-card">
             <div class="garancy-card__top">
-              <h3 class="garancy-card__title" itemprop="name">Подход для каждого</h3>
+              <h3 class="garancy-card__title">Подход для каждого</h3>
               <img class="garancy-card__icon" src="/images/puzzle-icon.svg" alt="rocket icon">
             </div>
-            <p class="garancy-card__description" itemprop="description">Кто-то любит делать сайты, кто-то — писать скрипты на Python. Я подстраиваюсь под интересы, а не заставляю всех идти в одном темпе</p>
+            <p class="garancy-card__description">Кто-то любит делать сайты, кто-то — писать скрипты на Python. Я подстраиваюсь под интересы, а не заставляю всех идти в одном темпе</p>
           </article>
         </li>
         <li class="garancy-list__item" data-garancy-card>
-          <article class="garancy-card" itemscope>
+          <article class="garancy-card">
             <div class="garancy-card__top">
-              <h3 class="garancy-card__title" itemprop="name">Родители всегда в курсе</h3>
+              <h3 class="garancy-card__title">Родители всегда в курсе</h3>
               <img class="garancy-card__icon" src="/images/statisctics-icon.svg" alt="rocket icon">
             </div>
-            <p class="garancy-card__description" itemprop="description">Регулярно рассказываю, что ученик изучает, какие успехи и над чем работает. Без общих фраз и "всё хорошо, поверьте"</p>
+            <p class="garancy-card__description">Регулярно рассказываю, что ученик изучает, какие успехи и над чем работает. Без общих фраз и "всё хорошо, поверьте"</p>
           </article>
         </li>
       </ul>
-      <a href="https://t.me/pivnenkowebdev" class="lead-link" id="garancyLink" target="_blank" itemprop="url" rel="noopener noreferrer">
+      <a href="https://t.me/pivnenkowebdev" class="lead-link" id="garancyLink" target="_blank" rel="noopener noreferrer">
           Узнать подробности
       </a>
     </div>

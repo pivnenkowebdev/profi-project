@@ -9,4 +9,4 @@ Allow: /assets/*.css$
 Allow: /assets/*.js$
 
 # Sitemap location
-Sitemap: https://pivnenkowebdev.com/public_html/sitemap.xml
+Sitemap: https://pivnenkowebdev.com/sitemap.xml
