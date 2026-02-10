@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Allow access to CSS and JS files
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemap location
+Sitemap: https://pivnenkowebdev.com/sitemap.xml
