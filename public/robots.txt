@@ -5,8 +5,8 @@ Disallow: /tmp/
 Disallow: /cgi-bin/
 
 # Allow access to CSS and JS files
-Allow: /*.css$
-Allow: /*.js$
+Allow: /assets/*.css$
+Allow: /assets/*.js$
 
 # Sitemap location
-Sitemap: https://pivnenkowebdev.com/sitemap.xml
+Sitemap: https://pivnenkowebdev.com/public_html/sitemap.xml
