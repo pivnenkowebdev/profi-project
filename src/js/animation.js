@@ -253,7 +253,7 @@ mm.add(
       scrollTrigger: {
         trigger: "#programmsSection",
         start: "top 60%",
-        end: "60% 70%",
+        end: "60% 60%",
         scrub: 2,
       },
       y: "100%",
