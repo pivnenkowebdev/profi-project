@@ -209,9 +209,9 @@ mm.add(
       .timeline({
         scrollTrigger: {
           trigger: "#programmsSection",
-          start: "top 80%",
-          end: "60% 90%",
-          scrub: 2,
+          start: "top bottom",
+          end: "20% 70%",
+          scrub: 1,
         },
       })
       .to("body", {
@@ -252,8 +252,8 @@ mm.add(
     gsap.from("[data-programm]", {
       scrollTrigger: {
         trigger: "#programmsSection",
-        start: "top 60%",
-        end: "60% 60%",
+        start: "top 50%",
+        end: "60% 70%",
         scrub: 2,
       },
       y: "100%",
