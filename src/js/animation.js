@@ -252,7 +252,7 @@ mm.add(
     gsap.from("[data-programm]", {
       scrollTrigger: {
         trigger: "#programmsSection",
-        start: "top 50%",
+        start: "top 60%",
         end: "60% 70%",
         scrub: 2,
       },
