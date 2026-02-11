@@ -4,7 +4,7 @@
     background-color: $blue;
     color: $white;
     z-index: 2;
-    
+
     &__content {
         height: 100%;
         min-height: 100%;
@@ -13,7 +13,7 @@
         justify-content: center;
         flex-direction: column;
         position: relative;
-        
+
         @media (max-width: 1300px) {
             justify-content: center;
             min-height: 100dvh;
@@ -21,8 +21,8 @@
     }
     
     &__wrapper-img {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
         position: absolute;
 
         &--rock {
