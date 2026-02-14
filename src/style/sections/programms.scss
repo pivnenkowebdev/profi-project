@@ -129,6 +129,21 @@
         flex-shrink: 0;
     }
 
+    &__info-link {
+        color: $blue;
+        font-size: 18px;
+        font-weight: 500;
+        transition: .3s;
+        margin-bottom: 40px;
+        padding-left: 15px;
+
+        &:hover{
+            color: $red;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    }
+
     .list-of-advantages {
         gap: 10px;
         margin-bottom: 30px;
