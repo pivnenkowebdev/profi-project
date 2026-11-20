@@ -1,0 +1,145 @@
+@use "../common/vars.scss" as *;
+
+.pricing {
+    &__content {
+        padding: 40px 0 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+
+        .main-subtitle {
+            margin-bottom: 0;
+        }
+    }
+
+    &__facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+        margin: 30px 0 40px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.75);
+
+        li::before {
+            content: "* ";
+            color: $red;
+        }
+
+        a {
+            color: $orange;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    }
+
+    &__cta {
+        align-self: center;
+    }
+}
+
+.currency-switch {
+    display: inline-flex;
+    padding: 4px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    flex-shrink: 0;
+
+    &__btn {
+        padding: 8px 18px;
+        border: none;
+        border-radius: 999px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.8);
+        font: inherit;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color .25s, color .25s;
+
+        &.is-active {
+            background-color: $orange;
+            color: $black;
+        }
+    }
+}
+
+.pricing-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+
+    @media (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.price-card {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 28px 24px;
+    border-radius: 16px;
+    background-color: $white;
+    color: $black;
+    border: 3px solid transparent;
+
+    &--popular {
+        border-color: $orange;
+        box-shadow: 0 0 30px rgba(253, 185, 39, 0.35);
+    }
+
+    &__badge {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 4px 14px;
+        border-radius: 999px;
+        background-color: $orange;
+        color: $black;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 8px;
+    }
+
+    &__total {
+        font-size: 44px;
+        font-weight: 800;
+        line-height: 1.1;
+        color: $blue;
+    }
+
+    &__per {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__note {
+        margin-top: auto;
+        padding-top: 12px;
+        font-size: 15px;
+        line-height: 1.35;
+        color: rgba(13, 6, 24, 0.65);
+    }
+}

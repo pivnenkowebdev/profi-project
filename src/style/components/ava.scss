@@ -41,14 +41,15 @@
         z-index: 2;
         overflow: hidden;
         background-color: $white;
-        animation: rotateAndMorphClockwise 10s linear infinite;
+        // рамка с фото не вращается, только переливается формой
+        animation: morphOnly 10s linear infinite;
     }
 
     &__img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
-        animation: antiRotate 10s linear infinite;
+        object-fit: cover;
+        object-position: 50% 40%;
     }
 }
 
@@ -106,4 +107,12 @@
     100% {
         transform: rotate(-360deg);
     }
+}
+
+@keyframes morphOnly {
+    0%   { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    25%  { border-radius: 60% 40% 30% 70% / 50% 30% 60% 40%; }
+    50%  { border-radius: 50% 50% 50% 50% / 40% 60% 60% 40%; }
+    75%  { border-radius: 20% 80% 60% 40% / 30% 70% 30% 70%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 }

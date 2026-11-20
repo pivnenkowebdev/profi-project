@@ -4,48 +4,43 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
+const BG_DARK = "#0d0618";
+
 // ===== HERO SECTION =====
 document.fonts.ready.then(() => {
-  const tlHero = gsap.timeline();
+  const tlHero = gsap.timeline({ defaults: { ease: "power2.out" } });
   const list = new SplitText("#heroList", { type: "lines" });
 
   tlHero
-    .from("#mainTitle", {
-      x: -100,
-      opacity: 0,
-      stagger: 0.05,
-      duration: 0.6,
-      ease: "power2.out",
-    })
-    .from("#heroSubtitle", {
-      x: -100,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.5,
-      ease: "power2.out",
-    })
-    .from(list.lines, {
-      x: -100,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.5,
-      ease: "power2.out",
-    })
-    .from("#heroLink", {
-      opacity: 0,
-      stagger: { amount: 0.5, from: "random" },
-      duration: 0.8,
-      ease: "power2.out",
-    });
+    .from("#mainTitle", { x: -100, opacity: 0, duration: 0.9 })
+    .from("#heroSubtitle", { x: -100, opacity: 0, duration: 0.8 }, "-=0.4")
+    .from(list.lines, { x: -100, opacity: 0, stagger: 0.15, duration: 0.8 }, "-=0.4")
+    .from("#heroLink", { opacity: 0, y: 20, duration: 0.9 }, "-=0.3");
 });
+
+// ===== ПЕРЕХОД НА ТЁМНУЮ ТЕМУ (начинается на секции «Программы обучения») =====
+const header = document.querySelector("#header");
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: "#programmsSection",
+      start: "top 85%",
+      end: "top 45%",
+      scrub: 1,
+      onEnter: () => header.classList.add("dark-mode"),
+      onLeaveBack: () => header.classList.remove("dark-mode"),
+    },
+  })
+  .to("body", { backgroundColor: BG_DARK, color: "#fff", ease: "none" });
 
 // ===== ABOUT SECTION =====
 gsap
   .timeline({
     scrollTrigger: {
       trigger: "#aboutMeSection",
-      start: "top 60%",
-      end: "60% 70%",
+      start: "top 85%",
+      end: "40% 65%",
       scrub: 2,
     },
   })
@@ -53,89 +48,12 @@ gsap
   .from("#aboutMeSubtitle", { x: "200%" }, ">")
   .from("#listAbout", { x: "200%" }, ">");
 
-const mm = gsap.matchMedia();
-
-// DESKTOP
-mm.add("(min-width: 769px)", () => {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: "#garancySection",
-        start: "top bottom",
-        end: "50% 70%",
-        scrub: 2,
-      },
-    })
-    .from("#garancyTitle", { x: "150%" })
-    .from("#garancySubtitle", { x: "150%" }, ">");
-
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: "#programmsSection",
-        start: "top 90%",
-        end: "50% 70%",
-        scrub: 2,
-        onEnter: () =>
-          document.querySelector("#header").classList.add("dark-mode"),
-        onLeaveBack: () =>
-          document.querySelector("#header").classList.remove("dark-mode"),
-      },
-    })
-    .to("body", {
-      backgroundColor: "rgba(0, 8, 20, 1)",
-      color: "#fff",
-      duration: 0.5,
-    })
-    .from("#programmTitle", { x: "150%" })
-    .from("[data-programm-subtitle='1']", { x: "150%" }, ">")
-    .from("[data-programm-subtitle='2']", { x: "150%" }, ">4");
-
-  gsap.from("[data-programm]", {
-    scrollTrigger: {
-      trigger: "#programmsSection",
-      start: "top 70%",
-      end: "60% 60%",
-      scrub: 2,
-    },
-    y: "100%",
-    opacity: 0,
-    stagger: 0.6,
-    duration: 1,
-  });
-
-  gsap.from("[data-garancy-card]", {
-    scrollTrigger: {
-      trigger: "#garancySection",
-      start: "top 70%",
-      end: "60% 60%",
-      scrub: 2,
-    },
-    y: "100%",
-    opacity: 0,
-    stagger: 0.6,
-    duration: 1,
-  });
-
-  gsap.from("#garancyLink", {
-    scrollTrigger: {
-      trigger: "#garancySection",
-      start: "top 95%",
-      end: "bottom 90%",
-      scrub: 2,
-    },
-    y: "100%",
-    opacity: 0,
-    stagger: 0.6,
-  });
-});
-
 // ===== ICONS =====
 const iconAnimations = [
-  { id: "#rockIcon", trigger: "#rockIcon", start: "top 80%" },
-  { id: "#manIcon", trigger: "#aboutMeSubtitle", start: "top 70%" },
-  { id: "#womanIcon", trigger: "#listAbout", start: "top 60%" },
-  { id: "#fireIcon", trigger: "#listAbout", start: "top 60%" },
+  { id: "#rockIcon", trigger: "#rockIcon", start: "top 95%" },
+  { id: "#manIcon", trigger: "#aboutMeSubtitle", start: "top 85%" },
+  { id: "#womanIcon", trigger: "#listAbout", start: "top 80%" },
+  { id: "#fireIcon", trigger: "#listAbout", start: "top 80%" },
 ];
 
 iconAnimations.forEach(({ id, trigger, start }) => {
@@ -148,143 +66,133 @@ iconAnimations.forEach(({ id, trigger, start }) => {
     },
     scale: 0,
     ease: "bounce.inOut",
-    duration: 1,
+    duration: 1.4,
   });
 });
 
-// ===== PROGRAMMS SECTION — MOBILE =====
-mm.add(
-  {
-    isMobile: "(max-width: 768px)",
-  },
-  () => {
-    gsap.from("#garancyTitle", {
+// Плавное появление каждой карточки по отдельности (для мобилок)
+function revealEach(selector) {
+  gsap.utils.toArray(selector).forEach((el) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 100%",
+        end: "top 80%",
+        scrub: 1.5,
+      },
+      y: 80,
+      opacity: 0,
+    });
+  });
+}
+
+const mm = gsap.matchMedia();
+
+// ===== DESKTOP =====
+mm.add("(min-width: 769px)", () => {
+  gsap
+    .timeline({
       scrollTrigger: {
         trigger: "#garancySection",
         start: "top bottom",
-        end: "20% 80%",
+        end: "40% 60%",
         scrub: 2,
       },
-      x: "150%",
-    });
+    })
+    .from("#garancyTitle", { x: "150%" })
+    .from("#garancySubtitle", { x: "150%" }, ">");
 
-    gsap.from("#garancySubtitle", {
-      scrollTrigger: {
-        trigger: "#garancySection",
-        start: "top 90%",
-        end: "20% 70%",
-        scrub: 2,
-      },
-      x: "150%",
-    });
-
-    // Карточки
-    gsap.from("[data-garancy-card]", {
-      scrollTrigger: {
-        trigger: "#garancySection",
-        start: "top 50%",
-        end: "60% 70%",
-        scrub: 2,
-      },
-      y: "100%",
-      opacity: 0,
-      stagger: 0.6,
-      duration: 1,
-    });
-
-    // Ссылка
-    gsap.from("#garancyLink", {
-      scrollTrigger: {
-        trigger: "#garancySection",
-        start: "40% 50%",
-        end: "60% 70%",
-        scrub: 2,
-      },
-      y: "100%",
-      opacity: 0,
-      stagger: 0.6,
-    });
-
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#programmsSection",
-          start: "top bottom",
-          end: "20% 70%",
-          scrub: 1,
-        },
-      })
-      .to("body", {
-        backgroundColor: "#000814",
-        color: "#fff",
-        duration: 0.5,
-      })
-      .to(
-        "#header",
-        {
-          backgroundColor: "rgba(255, 255, 255, 0)",
-          duration: 0.5,
-        },
-        "<",
-      );
-
-    gsap.from("#programmTitle", {
+  gsap
+    .timeline({
       scrollTrigger: {
         trigger: "#programmsSection",
         start: "top bottom",
-        end: "20% 70%",
+        end: "35% 60%",
         scrub: 2,
       },
-      x: "150%",
-    });
+    })
+    .from("#programmTitle", { x: "150%" })
+    .from("[data-programm-subtitle='1']", { x: "150%" }, ">");
 
-    gsap.from("#programmSubtitle", {
-      scrollTrigger: {
-        trigger: "#programmsSection",
-        start: "top 60%",
-        end: "20% 70%",
-        scrub: 2,
-      },
-      x: "150%",
-    });
+  gsap.from("[data-garancy-card]", {
+    scrollTrigger: {
+      trigger: "#garancySection",
+      start: "top 90%",
+      end: "60% 65%",
+      scrub: 2,
+    },
+    y: "100%",
+    opacity: 0,
+    stagger: 0.6,
+    duration: 1,
+  });
 
-    // Карточки
-    gsap.from("[data-programm]", {
-      scrollTrigger: {
-        trigger: "#programmsSection",
-        start: "top 50%",
-        end: "60% 70%",
-        scrub: 2,
-      },
-      y: "100%",
-      opacity: 0,
-      stagger: 0.6,
-      duration: 1,
-    });
+  gsap.from("[data-programm]", {
+    scrollTrigger: {
+      trigger: "#programmsSection",
+      start: "top 90%",
+      end: "60% 65%",
+      scrub: 2,
+    },
+    y: "100%",
+    opacity: 0,
+    stagger: 0.6,
+    duration: 1,
+  });
 
-    gsap.from("#programmLink", {
-      scrollTrigger: {
-        trigger: "#programmsSection",
-        start: "40% 50%",
-        end: "60% 70%",
-        scrub: 2,
-      },
-      y: "100%",
-      opacity: 0,
-      stagger: 0.6,
-    });
-  },
-);
+  gsap.from("#garancyLink", {
+    scrollTrigger: {
+      trigger: "#garancyLink",
+      start: "top 100%",
+      end: "top 85%",
+      scrub: 2,
+    },
+    y: 60,
+    opacity: 0,
+  });
+});
+
+// ===== MOBILE =====
+mm.add("(max-width: 768px)", () => {
+  gsap.from("#garancyTitle", {
+    scrollTrigger: { trigger: "#garancyTitle", start: "top 100%", end: "top 75%", scrub: 2 },
+    x: "150%",
+  });
+
+  gsap.from("#garancySubtitle", {
+    scrollTrigger: { trigger: "#garancySubtitle", start: "top 100%", end: "top 75%", scrub: 2 },
+    x: "150%",
+  });
+
+  revealEach("[data-garancy-card]");
+  revealEach("#garancyLink");
+
+
+  gsap.from("#programmTitle", {
+    scrollTrigger: { trigger: "#programmTitle", start: "top 100%", end: "top 75%", scrub: 2 },
+    x: "150%",
+  });
+
+  gsap.from("[data-programm-subtitle='1']", {
+    scrollTrigger: { trigger: "[data-programm-subtitle='1']", start: "top 100%", end: "top 75%", scrub: 2 },
+    x: "150%",
+  });
+
+  revealEach("[data-programm]");
+});
 
 // MOBILE MENU BG
 mm.add("(max-width: 1300px)", () => {
   gsap.to("#menuList", {
-    backgroundColor: "#000814",
+    backgroundColor: BG_DARK,
     duration: 0.3,
     scrollTrigger: {
       trigger: "#programmsSection",
-      start: "top center",
+      start: "top 60%",
       toggleActions: "play none none reverse",
     },
   });
 });
+
+// ===== PRICING =====
+revealEach("[data-price]");

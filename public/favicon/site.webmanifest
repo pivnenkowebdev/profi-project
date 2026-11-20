@@ -1,6 +1,6 @@
 {
-  "name": "pivnenkowebdev",
-  "short_name": "PW",
+  "name": "Anton.Code",
+  "short_name": "Anton.Code",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#8A2EF9",
   "background_color": "#ffffff",
   "display": "standalone"
 }

@@ -174,3 +174,8 @@
         }
     }
 }
+
+// звёздочки на белых карточках — фиолетовые, золото на белом плохо видно
+.card-programm .list-of-advantages__marker {
+    color: $blue;
+}
