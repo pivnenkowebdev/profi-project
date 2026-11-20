@@ -17,4 +17,4 @@ Allow: /assets/*.css$
 Allow: /assets/*.js$
 
 # Sitemap location
-Sitemap: https://pivnenkowebdev.com/sitemap.xml
+Sitemap: https://anton-code.com/sitemap.xml
