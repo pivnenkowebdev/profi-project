@@ -1,0 +1,20 @@
+# Сайт для русскоязычных семей в США, Канаде, Европе и англоязычных странах.
+# Поисковики Яндекс и Mail.ru сайт не индексируют.
+User-agent: Yandex
+Disallow: /
+
+User-agent: Mail.RU_Bot
+Disallow: /
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Allow access to CSS and JS files
+Allow: /assets/*.css$
+Allow: /assets/*.js$
+
+# Sitemap location
+Sitemap: https://pivnenkowebdev.com/sitemap.xml

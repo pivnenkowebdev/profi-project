@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "TikTokSans";
+  src: url("../fonts/TikTokSans-VariableFont_opsz,slnt,wdth,wght.ttf") format("truetype");
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0d0618;
+  color: #fff;
+  font-family: "TikTokSans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.legal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: radial-gradient(circle at 15% 0%, rgba(85, 37, 131, 0.5), transparent 60%), #0d0618;
+}
+
+.legal-header__inner,
+.legal-main,
+.legal-footer__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.legal-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.legal-logo img { width: 190px; display: block; }
+
+.legal-nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 15px; }
+
+a { color: #fdb927; }
+a:hover { text-underline-offset: 4px; }
+
+.legal-nav a { color: rgba(255, 255, 255, 0.8); text-decoration: none; }
+.legal-nav a:hover { color: #fdb927; text-decoration: underline; }
+
+.legal-main { padding-top: 40px; padding-bottom: 60px; }
+
+h1 { font-size: 36px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 36px 0 12px; color: #fdb927; }
+
+.legal-meta { color: rgba(255, 255, 255, 0.55); font-size: 15px; margin-bottom: 28px; }
+
+.legal-note {
+  border-left: 3px solid #fdb927;
+  background: rgba(85, 37, 131, 0.35);
+  padding: 14px 18px;
+  border-radius: 0 10px 10px 0;
+  margin: 20px 0;
+}
+
+p, li { color: rgba(255, 255, 255, 0.88); }
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+.legal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.legal-footer__inner { padding-top: 20px; padding-bottom: 30px; }
+
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 20px; }
+  .legal-header__inner { flex-direction: column; align-items: flex-start; }
+}
