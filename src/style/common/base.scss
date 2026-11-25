@@ -38,6 +38,12 @@ section {
     }
 }
 
+// FAQ растёт вместе с открытым аккордеоном
+.faq {
+    height: auto;
+    min-height: 100dvh;
+}
+
 main {
     padding-top: 75px;
 
