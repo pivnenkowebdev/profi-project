@@ -49,9 +49,11 @@ function createBanner() {
   banner.setAttribute("aria-label", "Согласие на использование файлов cookie");
   banner.innerHTML = `
     <p class="cookie-banner__text">
-      Сайт использует файлы cookie и пиксель Meta для оценки эффективности рекламы.
-      Они включаются только с вашего согласия, которое можно отозвать в любой момент.
-      Подробнее — в <a href="legal/privacy.html#cookies">Политике конфиденциальности</a>.
+      <strong>Я преподаю сам, без большой школы за спиной.</strong>
+      Cookie и пиксель Meta показывают, какая реклама действительно приводит родителей, —
+      так я трачу меньше на рекламу и больше времени уделяю урокам.
+      Включаются только с вашего согласия, отозвать можно в любой момент.
+      <a href="legal/privacy.html#cookies">Подробнее</a>
     </p>
     <div class="cookie-banner__actions">
       <button type="button" class="cookie-banner__btn" data-consent="denied">Отклонить</button>
