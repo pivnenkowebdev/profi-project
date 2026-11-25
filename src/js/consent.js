@@ -56,7 +56,7 @@ function createBanner() {
       <a href="legal/privacy.html#cookies">Подробнее</a>
     </p>
     <div class="cookie-banner__actions">
-      <button type="button" class="cookie-banner__btn" data-consent="denied">Отклонить</button>
+      <button type="button" class="cookie-banner__btn" data-consent="denied">Отказаться</button>
       <button type="button" class="cookie-banner__btn cookie-banner__btn--accept" data-consent="granted">Принять</button>
     </div>`;
 
