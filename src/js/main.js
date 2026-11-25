@@ -3,4 +3,5 @@ import '../js/animation.js';
 import '../js/header-anim.js';
 import '../js/accordeon.js';
 import '../js/currency.js';
+import '../js/consent.js';
 import '../style/main.scss';
