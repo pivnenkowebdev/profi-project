@@ -196,3 +196,8 @@ mm.add("(max-width: 1300px)", () => {
 
 // ===== PRICING =====
 revealEach("[data-price]");
+
+// ===== SKILLS =====
+revealEach("#skillsTitle");
+revealEach("#skillsSubtitle");
+revealEach("[data-skills-card]");
