@@ -137,3 +137,35 @@
         background-color: $white;
     }
 }
+
+.lang-link {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $black;
+    transition: background-color .3s, color .3s;
+
+    &:hover {
+        background-color: $blue;
+        border-color: $blue;
+        color: $white;
+    }
+}
+
+.header.dark-mode .lang-link {
+    color: $white;
+}
+
+.menu .anchor-link {
+    white-space: nowrap;
+}
+
+@media (min-width: 1301px) and (max-width: 1520px) {
+    .menu__list {
+        gap: 26px;
+    }
+}

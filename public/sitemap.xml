@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
 	<loc>https://anton-code.com/</loc>
+	<xhtml:link rel="alternate" hreflang="ru" href="https://anton-code.com/"/>
+	<xhtml:link rel="alternate" hreflang="en" href="https://anton-code.com/en/"/>
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://anton-code.com/en/"/>
 	<lastmod>2026-11-19T00:00:00+00:00</lastmod>
 	<changefreq>yearly</changefreq>
 	<priority>1.0</priority>
@@ -36,6 +39,15 @@
 	<image:image>
 			<image:loc>https://anton-code.com/images/statisctics-icon.svg</image:loc>
 	</image:image>
+</url>
+<url>
+	<loc>https://anton-code.com/en/</loc>
+	<xhtml:link rel="alternate" hreflang="ru" href="https://anton-code.com/"/>
+	<xhtml:link rel="alternate" hreflang="en" href="https://anton-code.com/en/"/>
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://anton-code.com/en/"/>
+	<lastmod>2026-11-26T00:00:00+00:00</lastmod>
+	<changefreq>monthly</changefreq>
+	<priority>0.9</priority>
 </url>
 <url>
 	<loc>https://anton-code.com/legal/offer.html</loc>

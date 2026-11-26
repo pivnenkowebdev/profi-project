@@ -46,14 +46,31 @@ function createBanner() {
   const banner = document.createElement("div");
   banner.className = "cookie-banner";
   banner.setAttribute("role", "dialog");
-  banner.setAttribute("aria-label", "Согласие на использование файлов cookie");
-  banner.innerHTML = `
+  banner.setAttribute(
+    "aria-label",
+    document.documentElement.lang === "en" ? "Cookie consent" : "Согласие на использование файлов cookie",
+  );
+  const isEn = document.documentElement.lang === "en";
+  banner.innerHTML = isEn
+    ? `
+    <p class="cookie-banner__text">
+      <strong>I teach on my own, without a big school behind me.</strong>
+      Cookies and the Meta Pixel show which ads actually bring in parents —
+      so I spend less on ads and more time on lessons.
+      They are only enabled with your consent, which you can withdraw at any time.
+      <a href="/legal/privacy-en.html#cookies">Learn more</a>
+    </p>
+    <div class="cookie-banner__actions">
+      <button type="button" class="cookie-banner__btn" data-consent="denied">Decline</button>
+      <button type="button" class="cookie-banner__btn cookie-banner__btn--accept" data-consent="granted">Accept</button>
+    </div>`
+    : `
     <p class="cookie-banner__text">
       <strong>Я преподаю сам, без большой школы за спиной.</strong>
       Cookie и пиксель Meta показывают, какая реклама действительно приводит родителей, —
       так я трачу меньше на рекламу и больше времени уделяю урокам.
       Включаются только с вашего согласия, отозвать можно в любой момент.
-      <a href="legal/privacy.html#cookies">Подробнее</a>
+      <a href="/legal/privacy.html#cookies">Подробнее</a>
     </p>
     <div class="cookie-banner__actions">
       <button type="button" class="cookie-banner__btn" data-consent="denied">Отказаться</button>
